@@ -1,18 +1,18 @@
 import React from 'react';
 import { Route } from "react-router-dom";
 
-
 //components
-import Nav from './components/Nav/Nav'
+import Buscador from "./components/Buscador/Buscador"
+
 
 
 import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
-        <Nav />
-    </React.Fragment>
+    <>
+      <Route exact path="/" component={Buscador} />
+    </>
   );
 }
 
