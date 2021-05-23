@@ -4,7 +4,9 @@ import styles from './Favoritos.module.css'
 
     function Favoritos(){
         return(
-            <div></div>
+            <React.Fragment>
+                favoritps
+            </React.Fragment>
         )
 }
 

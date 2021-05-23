@@ -38,10 +38,14 @@
 
 
 .navbarItem{
-    background-color: brown;
-
-    height: 2rem;
+    height: 3rem;
     width: 5rem;
+    background-color: brown;
+    padding: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    text-align: center;
 
 }
 
