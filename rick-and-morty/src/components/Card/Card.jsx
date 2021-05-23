@@ -1,11 +1,32 @@
 import React from "react"
-
 import styles from './Card.module.css'
+import { connect } from 'react-redux'
+import { addFavorites } from "../../redux/actions.js"
 
-    function Card(){
-        return(
-            <div></div>
-        )
+function Card(props) {
+
+    return (
+        <div class={styles.card}>
+            <span class={styles.cardName}> {props.name}</span>
+            <img src={props.image} />
+            
+        </div>
+    )
 }
 
-export default Card;
+const mapStateToProps = state => {
+    return {
+        chars: state.charsLoaded,
+        favoritos: state.charsFavorites
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addFavorites: char => dispatch(addFavorites(char))
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Card);

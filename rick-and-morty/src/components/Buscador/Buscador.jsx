@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import { connect } from 'react-redux'
-import { getChars } from '../../redux/actions'
+import { getChars, addFavorites } from '../../redux/actions'
 import swal from 'sweetalert'
+import {Link} from "react-router-dom"
+
 
 import Card from '../Card/Card'
 
@@ -25,6 +27,7 @@ function Buscador(props) {
 
     return (
         <div>
+            <Link to = "/favoritos">Favs</Link>
             <h2>Buscador</h2>
             <form action="" onSubmit={(e) => handleSubmit(e)}>
                 <label htmlFor="">Personaje: </label>
@@ -40,7 +43,7 @@ function Buscador(props) {
 
             <div>
                 {
-                    props.chars && props.chars.map(char => (
+                    props.chars.length > 0 ? props.chars.map(char => (
                         <div key={char.id}>
                             <Card
                                 id={char.id}
@@ -49,8 +52,18 @@ function Buscador(props) {
                                 species={char.species}
                                 image={char.image}
                             />
+                            <button onClick={() =>
+                                props.addFavorite({
+                                    id: char.id,
+                                    gender: char.gender,
+                                    name: char.name,
+                                    species: char.species,
+                                    image: char.image
+                                })}
+                            > Fav
+                            </button>
                         </div>
-                    ))
+                    )) : <div>ACA VA EL PORTAL</div>
                 }
             </div>
 
@@ -68,7 +81,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getChars: char => dispatch(getChars(char))
+        getChars: char => dispatch(getChars(char)),
+        addFavorite: char => dispatch(addFavorites(char))
     }
 }
 

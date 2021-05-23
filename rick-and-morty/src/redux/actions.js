@@ -4,7 +4,7 @@ export const GET_CHARS = 'GET_CHARS';
 export const ADD_FAVORITES = 'ADD_FAVORITES';
 export const REMOVE_FAVORITES = 'REMOVE_FAVORITES';
 
-export function getChars(char) {
+ export function getChars(char) {
     return function (dispatch) {
         return fetch("https://rickandmortyapi.com/api/character/?name=" + char)
             .then(response => response.json())
