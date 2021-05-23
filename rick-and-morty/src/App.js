@@ -16,9 +16,7 @@ function App() {
       <Route exact path= "/favoritos" component= {Favoritos}/>
     </>
    <div>
-     <Card> 
-       {/* name = {.name} */}
-     </Card>
+     
    </div>
     
     
