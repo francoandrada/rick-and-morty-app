@@ -4,7 +4,9 @@ import styles from './About.module.css'
 
     function About(){
         return(
-            <div></div>
+            <React.Fragment>
+                about
+            </React.Fragment>
         )
 }
 
