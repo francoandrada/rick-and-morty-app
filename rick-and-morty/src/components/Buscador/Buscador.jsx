@@ -3,28 +3,30 @@ import { connect } from 'react-redux'
 import { getChars } from '../../redux/actions'
 import swal from 'sweetalert'
 
+import Card from '../Card/Card'
+
 
 function Buscador(props) {
-    
+
     const [input, setInput] = useState("");
-    
+
     const handleChange = (event) => {
-        setInput( event.target.value )
+        setInput(event.target.value)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if (input.length === 0) {
             swal("Tenes que ingresar un nombre")
-        }else {
+        } else {
             props.getChars(input);
         }
-      }
-    
+    }
+
     return (
         <div>
             <h2>Buscador</h2>
-            <form action="" onSubmit={ (e) => handleSubmit(e)}>
+            <form action="" onSubmit={(e) => handleSubmit(e)}>
                 <label htmlFor="">Personaje: </label>
                 <input
                     type="text"
@@ -37,9 +39,21 @@ function Buscador(props) {
             </form>
 
             <div>
-
+                {
+                    props.chars && props.chars.map(char => (
+                        <div key={char.id}>
+                            <Card
+                                id={char.id}
+                                gender={char.gender}
+                                name={char.name}
+                                species={char.species}
+                                image={char.image}
+                            />
+                        </div>
+                    ))
+                }
             </div>
-        
+
         </div>
 
     )
