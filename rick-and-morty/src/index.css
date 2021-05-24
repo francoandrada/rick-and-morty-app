@@ -1,0 +1,13 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+    background-color: #e7e0db;
+    color: #000;
+    height: 2rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 4px;
+}

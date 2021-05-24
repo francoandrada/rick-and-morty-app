@@ -39,7 +39,7 @@ function Buscador(props) {
                         onChange={(e) => handleChange(e)}
                     />
 
-                    <button type='submit'>Buscar</button>
+                    <button id={styles.search} type='submit'>Buscar</button>
                 </form>
             </div>
 
@@ -54,16 +54,6 @@ function Buscador(props) {
                                 species={char.species}
                                 image={char.image}
                             />
-                            <button onClick={() =>
-                                props.addFavorite({
-                                    id: char.id,
-                                    gender: char.gender,
-                                    name: char.name,
-                                    species: char.species,
-                                    image: char.image
-                                })}
-                            > Fav
-                            </button>
                         </div>
                     )) : <div>ACA VA EL PORTAL</div>
                 }
