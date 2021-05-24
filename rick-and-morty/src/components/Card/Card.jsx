@@ -7,9 +7,14 @@ function Card(props) {
 
     return (
         <div class={styles.card}>
-            <span class={styles.cardName}> {props.name}</span>
-            <img src={props.image} />
-            
+            <img class={styles.cardImage} src={props.image} />
+            <div className={styles.textContainer}>
+                <p>Nombre: {props.name}</p>
+                <p>Género: {props.gender}</p>
+                <p>Especie: {props.species}</p>
+                <button id={styles.addButton}
+                onClick={() => props.addFavorites({id:props.id, gender:props.gender, species:props.species, name:props.name, image:props.image})}>Agregar a favoritos</button>    
+            </div>        
         </div>
     )
 }

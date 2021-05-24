@@ -1,12 +1,15 @@
 .container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cardContainer {
-        position: relative;
-        width: 220px;
-        height: 190px;
-        margin: 20px;
         display: flex;
         flex-direction: column;
+}
+
+#search {
+    margin-left: 0.5rem;
 }
