@@ -3,24 +3,22 @@ import { Route } from "react-router-dom";
 import Card from "./components/Card/Card.jsx"
 //components
 import Buscador from "./components/Buscador/Buscador"
-import Favoritos from "./components/Favoritos/Favoritos.jsx"
 
-
+import Nav from "./components/Nav/Nav"
+import About from './components/About/About'
+import Favoritos from './components/Favoritos/Favoritos'
 
 import './App.css';
 
 function App() {
   return (
-    <div> <>
-      <Route exact path="/" component={Buscador}/>
-      <Route exact path= "/favoritos" component= {Favoritos}/>
-    </>
-   <div>
-     
-   </div>
-    
-    
-    </div>
+
+    <React.Fragment>
+      <Nav />
+      <Route exact path="/" component={Buscador} />
+      <Route path="/about" component={About}/>
+      <Route path="/favoritos" component={Favoritos}/>
+    </React.Fragment>
   );
 }
 

@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { removeFavorites } from '../../redux/actions'
 import styles from './Favoritos.module.css'
 
-
 function Favoritos(props) {
     return (
         <div>
