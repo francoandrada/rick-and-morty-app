@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import { connect } from 'react-redux'
 import { getChars, addFavorites } from '../../redux/actions'
 import swal from 'sweetalert'
-import {Link} from "react-router-dom"
-
+import styles from './Buscador.module.css'
+import { Link } from "react-router-dom"
 
 import Card from '../Card/Card'
 
@@ -26,22 +26,24 @@ function Buscador(props) {
     }
 
     return (
-        <div>
-            <Link to = "/favoritos">Favs</Link>
+        <div className={styles.container}>
+            <Link to="/favoritos">Favs</Link>
             <h2>Buscador</h2>
-            <form action="" onSubmit={(e) => handleSubmit(e)}>
-                <label htmlFor="">Personaje: </label>
-                <input
-                    type="text"
-
-                    value={input}
-                    onChange={(e) => handleChange(e)}
-                />
-
-                <button type='submit'>Buscar</button>
-            </form>
-
             <div>
+                <form action="" onSubmit={(e) => handleSubmit(e)}>
+                    <label htmlFor="">Personaje: </label>
+                    <input
+                        type="text"
+
+                        value={input}
+                        onChange={(e) => handleChange(e)}
+                    />
+
+                    <button type='submit'>Buscar</button>
+                </form>
+            </div>
+
+            <div className={styles.cardContainer}>
                 {
                     props.chars.length > 0 ? props.chars.map(char => (
                         <div key={char.id}>
