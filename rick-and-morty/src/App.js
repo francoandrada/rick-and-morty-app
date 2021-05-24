@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import Card from "./components/Card/Card.jsx"
+
 //components
 import Buscador from "./components/Buscador/Buscador"
 
