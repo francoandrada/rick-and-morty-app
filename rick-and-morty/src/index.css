@@ -1,5 +1,8 @@
 body {
+    background-image: url("https://img.pngio.com/rick-and-morty-pickle-rick-rick-in-2019-rick-morty-rick-pickle-rick-background-640_1136.jpg");
     font-family: Helvetica, Arial, sans-serif;
+    background-size: 25rem;
+   
 }
 
 button {

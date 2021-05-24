@@ -5,29 +5,27 @@ import styles from './Favoritos.module.css'
 
 function Favoritos(props) {
     return (
-        <div>
-
+        <div class={styles.divfav}>
+            <h3 id= {styles.title}> Tus Personajes Favoritos</h3>
             {
                 props.chars.map(char => (
-                    <div>
+                    <div class={styles.card} >
 
-                        <p>gender:{char.gender} </p>
-                        <p>name:{char.name} </p>
-                        <p>species:{char.species} </p>
+                        <img class={styles.cardImage} src={char.image} alt={char.name} />
 
-                        <img src={char.image} alt={char.name} />
-                        <button onClick={() =>
-                            props.removeFavorite({
-                                id:char.id
-                            }
+                        
+                        <div className={styles.textContainer} >
+                            <p>Gender:{char.gender} </p>
+                            <p>Name:{char.name} </p>
+                            <p>Species:{char.species} </p>
 
-                            )
-                        }> x </button>
+                        </div>
+                        <div id={styles.removeButton}>
+                            <button id= {styles.btn} onClick={() => props.removeFavorite({ id: char.id })}> x </button>
+                        </div>
                     </div>
-
                 ))
             }
-
         </div>
     )
 }
