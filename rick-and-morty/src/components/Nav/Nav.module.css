@@ -1,37 +1,40 @@
+
 .navContainer{
     width: 100%;
     height: 100px;
     display: flex; 
     flex-direction: row;
     
-    background-color: aqua;
 }
 
 
 .iContainer{
     height: 100%;
-    width: 25%;
-    background-color: aquamarine;
-    
+    width: 35%;
+
 }
 
+.navLogo{
+    height: 100%;
+    width: 100%;
+}
 .navbarContainer{
     height: 100%;
-    width: 100%;
+    width: 65%;
     justify-content: center;
+
 }
 .navbar{
+    text-decoration: none;
     height: 100%;
     width: 100%;
-    background-color: cadetblue;
-    padding: 0px;
-    margin: 0px;
+    padding: 0rem;
+    margin: 0rem;
     list-style: none;
     display: flex;
     flex-direction: row;
-
-    
     justify-content:flex-end;
+    align-items: center;
 }
 
 
@@ -39,15 +42,37 @@
 
 .navbarItem{
     height: 3rem;
-    width: 5rem;
-    background-color: brown;
-    padding: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-decoration: none;
-    text-align: center;
-    
-
+    width: 6rem;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    border:#98ece0 3px solid;
+    background-color:  #62ef24;
+    transition: background-color .5s;
+    font-size: 1rem;
 }
 
+.navbarItem:hover {
+    background-color:#98ece0 ;
+    border:#62ef24   3px solid;
+    font-size: 1.3rem;
+    
+  }
+
+
+
+  .itemText{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    color: rgb(26, 17, 17);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+
+
+
+    
+    
+}
 
