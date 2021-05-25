@@ -5,11 +5,32 @@
     align-items: center;
 }
 
-.cardContainer {
+.container_card {
         display: flex;
         flex-direction: column;
 }
 
+.container_form {
+    margin-top: 1rem;
+}
+
+.input {
+    outline: none;
+}
+
+::placeholder { color: rgba(114, 113, 113, 0.322); }
+
 #search {
     margin-left: 0.5rem;
+    height: 1.339rem;
+    border: 1.6px solid;
+    border-color: #DE43CE;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+#search:hover {
+    background-color: #DE43CE;;
+    color: white;
 }

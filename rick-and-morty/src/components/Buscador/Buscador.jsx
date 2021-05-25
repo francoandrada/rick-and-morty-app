@@ -27,23 +27,14 @@ function Buscador(props) {
 
     return (
         <div className={styles.container}>
-            <Link to="/favoritos">Favs</Link>
-            <h2>Buscador</h2>
-            <div>
+            <div className={styles.container_form}>
                 <form action="" onSubmit={(e) => handleSubmit(e)}>
-                    <label htmlFor="">Personaje: </label>
-                    <input
-                        type="text"
-
-                        value={input}
-                        onChange={(e) => handleChange(e)}
-                    />
-
+                    <input className={styles.input} type="text" placeholder="Busca un personaje.." value={input} onChange={(e) => handleChange(e)} />
                     <button id={styles.search} type='submit'>Buscar</button>
                 </form>
             </div>
 
-            <div className={styles.cardContainer}>
+            <div className={styles.container_card}>
                 {
                     props.chars.length > 0 ? props.chars.map(char => (
                         <div key={char.id}>
