@@ -1,4 +1,5 @@
 .card {
+    
     background-color: #8bcf21;
     width: 30rem;
     height: 14rem;
@@ -11,9 +12,26 @@
     padding-bottom: 1rem;
 }
 
+#addButton {
+    height: 3rem;
+    width: 6rem;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    border:#98ece0 2px solid;
+    background-color:  #62ef24;
+    transition: background-color .5s;
+    font-size: 0.9rem;
+}
+#addButton:hover {
+    background-color:#98ece0 ;
+ 
+    
+}
+
 .card:hover {
     transform: scale(1.1);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    transition: 0.3s;
 }
 
 .cardImage {
