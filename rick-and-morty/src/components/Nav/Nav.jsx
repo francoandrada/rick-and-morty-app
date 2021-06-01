@@ -4,14 +4,18 @@ import { NavLink } from 'react-router-dom';
 import styles from "./Nav.module.css"
 import navLogo from '../../assets/img/rick-and-morty-logo.png'
 
+
+
 import About from "../About/About"
 
 export default function Nav(){
     return(
             <div className={styles.navContainer}>
-                <div className={styles.iContainer}>
-                    <img className={styles.navLogo} src={navLogo} alt="" srcset="" />
-                </div>
+                <NavLink  to="/">
+                    <div className={styles.iContainer}>
+                        <img className={styles.navLogo} src={navLogo} alt="" srcset="" />
+                    </div>
+                </NavLink>
                 <div className={styles.navbarContainer}>
                     <ul className={styles.navbar}>
                         <NavLink  to="/">                 
