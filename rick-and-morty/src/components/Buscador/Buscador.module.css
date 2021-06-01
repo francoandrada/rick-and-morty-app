@@ -16,6 +16,9 @@
 
 .input {
     outline: none;
+    border-radius: 0.5em;
+    border: 0.1em solid;
+    padding: 0.2em 0em;
 }
 
 ::placeholder { color: rgba(114, 113, 113, 0.322); }
@@ -28,6 +31,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: all 250ms;
+    color: white;
 }
 
 #search:hover {
