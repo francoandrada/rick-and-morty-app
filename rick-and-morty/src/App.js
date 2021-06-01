@@ -15,6 +15,9 @@ function App() {
   return (
 
     <React.Fragment>
+
+     
+
       <div class="noFooter">
         <Nav />
         <Route exact path="/" component={Buscador} />
@@ -22,6 +25,7 @@ function App() {
         <Route path="/favoritos" component={Favoritos} />
       </div>
       <Route exact path="/" component={Footer} />
+
     </React.Fragment>
   );
 }
